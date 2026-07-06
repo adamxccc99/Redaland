@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auberge Reda Land — Havre de Paix à Benslimane | Hôtel 3★ avec Piscine & Jacuzzi</title>
+    <meta name="description" content="Auberge Reda Land, hôtel 3 étoiles à Benslimane. Suites avec jacuzzi, piscine, petit-déjeuner inclus, Wi-Fi gratuit. Un havre de sérénité au charme campagnard. Réservez sur Booking.com.">
+    <meta name="keywords" content="Auberge Reda Land, Benslimane, hôtel, jacuzzi, piscine, Maroc, suite, tajine, nature, calme, R305">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --terracotta: #C67B4B;
+            --terracotta-dark: #A85D32;
+            --deep-blue: #1B3A4B;
+            --gold: #D4A853;
+            --gold-light: #E8C97A;
+            --cream: #FDF8F4;
+            --cream-dark: #F5EDE4;
+            --text: #2C2C2C;
+            --text-light: #5A5A5A;
+            --white: #FFFFFF;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.16);
+            --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.2);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.25;
+            color: var(--deep-blue);
+        }
+
+        /* ── NAVBAR ─────────────────────── */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition);
+            background: transparent;
+        }
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: var(--shadow-sm);
+            padding: 10px 40px;
+        }
+        .navbar .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .navbar.scrolled .logo {
+            color: var(--deep-blue);
+        }
+        .logo-icon {
+            font-size: 1.8rem;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            position: relative;
+            padding: 4px 0;
+        }
+        .navbar.scrolled .nav-links a {
+            color: var(--text);
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .nav-links a:hover {
+            color: var(--gold-light);
+        }
+        .navbar.scrolled .nav-links a:hover {
+            color: var(--terracotta);
+        }
+        .btn-book-nav {
+            background: var(--gold);
+            color: var(--deep-blue) !important;
+            padding: 10px 22px !important;
+            border-radius: 50px;
+            font-weight: 700 !important;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .btn-book-nav:hover {
+            background: var(--gold-light) !important;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .btn-book-nav::after {
+            display: none !important;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+            background: none;
+            border: none;
+            padding: 8px;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 2.5px;
+            background: var(--white);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+        .navbar.scrolled .hamburger span {
+            background: var(--deep-blue);
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ── HERO ───────────────────────── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(27, 58, 75, 0.75) 0%, rgba(27, 58, 75, 0.55) 40%, rgba(198, 123, 75, 0.5) 100%),
+                url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1600&q=80') center/cover no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero-stars {
+            color: var(--gold-light);
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+        .hero h1 {
+            font-size: clamp(2.6rem, 6vw, 4.5rem);
+            color: var(--white);
+            margin-bottom: 12px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 8px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        .hero-location {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: var(--deep-blue);
+            box-shadow: var(--shadow-md);
+        }
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.7);
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--white);
+            transform: translateY(-3px);
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s infinite;
+            color: var(--white);
+            font-size: 1.8rem;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(15px);
+            }
+        }
+
+        /* ── SECTIONS ──────────────────── */
+        section {
+            padding: 90px 40px;
+        }
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 20px;
+            }
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-tag {
+            display: inline-block;
+            color: var(--terracotta);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+        }
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 12px;
+        }
+        .section-header .divider {
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 0 auto;
+            border-radius: 3px;
+        }
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 16px auto 0;
+            font-size: 1.05rem;
+        }
+
+        /* ── ABOUT ─────────────────────── */
+        #about {
+            background: var(--white);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        .about-image {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        .about-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition-slow);
+        }
+        .about-image:hover img {
+            transform: scale(1.04);
+        }
+        .about-image .badge-floating {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: var(--white);
+            padding: 14px 20px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+        .badge-floating .rating {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--terracotta);
+            font-family: 'Playfair Display', serif;
+        }
+        .badge-floating .stars-small {
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 14px;
+            font-size: 1rem;
+        }
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .highlight-item i {
+            color: var(--terracotta);
+            font-size: 1.2rem;
+            width: 28px;
+            text-align: center;
+        }
+
+        /* ── ROOMS ─────────────────────── */
+        #rooms {
+            background: var(--cream-dark);
+        }
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .room-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .room-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        .room-card-image {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+        .room-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+        .room-card:hover .room-card-image img {
+            transform: scale(1.06);
+        }
+        .room-card-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: var(--terracotta);
+            color: var(--white);
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .room-card-body {
+            padding: 22px 24px 28px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .room-card-body h4 {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+        .room-card-body .room-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 10px 0;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        .room-features span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .room-features i {
+            color: var(--terracotta);
+            font-size: 0.9rem;
+        }
+        .room-card-body .room-price {
+            margin-top: auto;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-blue);
+            font-family: 'Playfair Display', serif;
+        }
+        .room-price small {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--text-light);
+            font-family: 'Raleway', sans-serif;
+        }
+        .btn-room {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 10px 24px;
+            background: var(--deep-blue);
+            color: var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            text-align: center;
+        }
+        .btn-room:hover {
+            background: var(--terracotta);
+            transform: translateY(-2px);
+        }
+
+        /* ── AMENITIES ─────────────────── */
+        #amenities {
+            background: var(--white);
+        }
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .amenity-card {
+            padding: 30px 20px;
+            border-radius: var(--radius-lg);
+            background: var(--cream);
+            transition: var(--transition);
+            cursor: default;
+        }
+        .amenity-card:hover {
+            background: var(--cream-dark);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        .amenity-icon {
+            font-size: 2.4rem;
+            color: var(--terracotta);
+            margin-bottom: 12px;
+            display: block;
+        }
+        .amenity-card h5 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+        }
+        .amenity-card p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* ── GALLERY ───────────────────── */
+        #gallery {
+            background: var(--cream-dark);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 220px;
+            gap: 12px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        @media (max-width: 900px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 180px;
+            }
+        }
+        @media (max-width: 500px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 200px;
+            }
+        }
+        .gallery-item {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .gallery-item:hover {
+            box-shadow: var(--shadow-lg);
+            transform: scale(1.02);
+            z-index: 2;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        .gallery-item.wide {
+            grid-column: span 2;
+        }
+        @media (max-width: 900px) {
+            .gallery-item.wide {
+                grid-column: span 2;
+            }
+        }
+        @media (max-width: 500px) {
+            .gallery-item.wide {
+                grid-column: span 1;
+            }
+        }
+
+        /* ── REVIEWS ──────────────────── */
+        #reviews {
+            background: var(--white);
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .review-card {
+            background: var(--cream);
+            padding: 30px 26px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+        }
+        .review-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+        .review-card .quote-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            opacity: 0.5;
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        .review-stars {
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        .review-card p {
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 14px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        .review-author {
+            font-weight: 700;
+            color: var(--deep-blue);
+            font-size: 0.9rem;
+        }
+        .review-detail {
+            font-size: 0.78rem;
+            color: var(--text-light);
+        }
+        .review-scores {
+            display: flex;
+            gap: 14px;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: var(--terracotta);
+            font-weight: 600;
+        }
+
+        /* ── BOOKING CTA ───────────────── */
+        #booking {
+            background: linear-gradient(135deg, var(--deep-blue) 0%, #0f2430 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        #booking .section-header h2 {
+            color: var(--white);
+        }
+        #booking .section-header p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        #booking .section-tag {
+            color: var(--gold-light);
+        }
+        .booking-card {
+            max-width: 650px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: var(--radius-xl);
+            padding: 40px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+        }
+        .booking-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .booking-info-item {
+            text-align: center;
+            min-width: 100px;
+        }
+        .booking-info-item .val {
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            color: var(--gold-light);
+        }
+        .booking-info-item .lbl {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        .btn-booking-cta {
+            background: var(--gold);
+            color: var(--deep-blue);
+            padding: 16px 36px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow-lg);
+            margin-top: 10px;
+        }
+        .btn-booking-cta:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* ── CONTACT ──────────────────── */
+        #contact {
+            background: var(--cream-dark);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        @media (max-width: 800px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .contact-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .contact-detail i {
+            color: var(--terracotta);
+            font-size: 1.2rem;
+            margin-top: 3px;
+            width: 24px;
+            text-align: center;
+        }
+        .contact-detail strong {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            letter-spacing: 0.5px;
+        }
+        .contact-detail span,
+        .contact-detail a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-detail a:hover {
+            color: var(--terracotta);
+        }
+        .map-embed {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 350px;
+            width: 100%;
+        }
+        .map-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ── FOOTER ───────────────────── */
+        footer {
+            background: var(--deep-blue);
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+        footer .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--white);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        footer a {
+            color: var(--gold-light);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-social {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin: 14px 0;
+        }
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+        .footer-social a:hover {
+            background: var(--terracotta);
+            transform: translateY(-2px);
+        }
+
+        /* ── WHATSAPP FLOAT ───────────── */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            background: #25D366;
+            color: #fff;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* ── MOBILE NAV ────────────────── */
+        @media (max-width: 850px) {
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: 90px 30px 30px;
+                gap: 20px;
+                box-shadow: var(--shadow-xl);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .nav-links a {
+                color: var(--text) !important;
+                font-size: 1.05rem;
+            }
+            .btn-book-nav {
+                text-align: center;
+            }
+            .navbar {
+                padding: 12px 20px;
+            }
+            .navbar.scrolled {
+                padding: 10px 20px;
+            }
+        }
+
+        /* ── LIGHTBOX ─────────────────── */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-xl);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 2001;
+            background: none;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">
+            <span class="logo-icon">🌿</span> Reda Land
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" onclick="closeNav()">Accueil</a></li>
+            <li><a href="#about" onclick="closeNav()">À propos</a></li>
+            <li><a href="#rooms" onclick="closeNav()">Chambres</a></li>
+            <li><a href="#gallery" onclick="closeNav()">Galerie</a></li>
+            <li><a href="#reviews" onclick="closeNav()">Avis</a></li>
+            <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+            <li><a href="#booking" class="btn-book-nav" onclick="closeNav()">Réserver</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleNav()">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">🌙 Auberge 3 Étoiles</div>
+            <div class="hero-stars">★★★★☆</div>
+            <h1>Auberge Reda Land</h1>
+            <p class="hero-subtitle">Havre de paix, sérénité & douceur de vivre</p>
+            <p class="hero-location"><i class="fas fa-map-marker-alt"></i> R305, Benslimane, Maroc</p>
+            <div class="hero-btns">
+                <a href="#booking" class="btn btn-primary">Réserver maintenant</a>
+                <a href="#about" class="btn btn-outline">Découvrir</a>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section id="about">
+        <div class="section-header">
+            <span class="section-tag">Notre Histoire</span>
+            <h2>Un Refuge au Charme Campagnard</h2>
+            <div class="divider"></div>
+            <p>Où la nature rencontre l'excellence de l'accueil marocain</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80"
+                alt="Auberge Reda Land - Extérieur et piscine"
+                loading="lazy">
+                <div class="badge-floating">
+                    <div class="rating">3.7</div>
+                    <div class="stars-small">★★★★☆</div>
+                    <small>75+ avis Google</small>
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>Bienvenue chez Reda Land</h3>
+                <p>
+                    Nichée sur la route nationale de Benslimane, l'Auberge Reda Land est bien plus qu'un simple hôtel.
+                    C'est un véritable <strong>refuge pour les amoureux de la nature</strong>, où le calme,
+                    l'authenticité et le dépaysement se conjuguent pour offrir une expérience inoubliable.
+                </p>
+                <p>
+                    Tout est pensé avec soin pour offrir une expérience unique dans un cadre naturel exceptionnel.
+                    Que vous cherchiez à oublier le stress du quotidien ou à célébrer un moment spécial,
+                    Reda Land vous accueille avec chaleur et hospitalité.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-item"><i class="fas fa-check-circle"></i> Petit-déjeuner inclus</div>
+                    <div class="highlight-item"><i class="fas fa-check-circle"></i> Wi-Fi gratuit</div>
+                    <div class="highlight-item"><i class="fas fa-check-circle"></i> Piscine extérieure</div>
+                    <div class="highlight-item"><i class="fas fa-check-circle"></i> Suites avec jacuzzi</div>
+                    <div class="highlight-item"><i class="fas fa-check-circle"></i> Restaurant & tajines</div>
+                    <div class="highlight-item"><i class="fas fa-check-circle"></i> Check-out 12:00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ROOMS ═══════════════ -->
+    <section id="rooms">
+        <div class="section-header">
+            <span class="section-tag">Hébergement</span>
+            <h2>Nos Chambres & Suites</h2>
+            <div class="divider"></div>
+            <p>Confort raffiné dans un écrin de nature</p>
+        </div>
+        <div class="rooms-grid">
+            <!-- Chambre Standard -->
+            <div class="room-card">
+                <div class="room-card-image">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80"
+                    alt="Chambre Standard Reda Land" loading="lazy">
+                    <span class="room-card-badge">Standard</span>
+                </div>
+                <div class="room-card-body">
+                    <h4>Chambre Standard</h4>
+                    <div class="room-features">
+                        <span><i class="fas fa-bed"></i> Lit double</span>
+                        <span><i class="fas fa-wifi"></i> Wi-Fi</span>
+                        <span><i class="fas fa-coffee"></i> Petit-déj.</span>
+                    </div>
+                    <p style="font-size:0.9rem;color:var(--text-light);">Confort simple et élégant pour une escapade paisible.</p>
+                    <div class="room-price">À partir de 395 MAD<small>/nuit</small></div>
+                    <a href="https://www.booking.com/hotel/ma/reda-land-ben-slimane.fr.html?aid=2127708&label=metagha-link-MRMA-hotel-4092808_dev-desktop_los-1_bw-2_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-_mcid-50_bc-AD5ziA_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20260708_ppt-&sid=b48bc8919c4aaa6b411af7f449b8f0a6&all_sr_blocks=409280804_335449432_2_1_0&checkin=2026-07-08&checkout=2026-07-09&dest_id=4092808&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=409280804_335449432_2_1_0&hpos=1&map=1&matching_block_id=409280804_335449432_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A,A&sb_price_type=total&sr_order=popularity&sr_pri_blocks=409280804_335449432_2_1_0__3956&srepoch=1783352160&srpvid=55826daf73cd0613&type=total&ucfs=1"
+                    target="_blank" rel="noopener" class="btn-room">Voir sur Booking.com</a>
+                </div>
+            </div>
+            <!-- Suite Jacuzzi -->
+            <div class="room-card">
+                <div class="room-card-image">
+                    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80"
+                    alt="Suite Jacuzzi Reda Land" loading="lazy">
+                    <span class="room-card-badge" style="background:#D4A853;">Populaire</span>
+                </div>
+                <div class="room-card-body">
+                    <h4>Suite avec Jacuzzi</h4>
+                    <div class="room-features">
+                        <span><i class="fas fa-hot-tub"></i> Jacuzzi privé</span>
+                        <span><i class="fas fa-bed"></i> Grand lit</span>
+                        <span><i class="fas fa-wifi"></i> Wi-Fi</span>
+                        <span><i class="fas fa-coffee"></i> Petit-déj.</span>
+                    </div>
+                    <p style="font-size:0.9rem;color:var(--text-light);">Belle suite avec jacuzzi et balcon avec vue dégagée. Idéale pour une escapade romantique.</p>
+                    <div class="room-price">À partir de 650 MAD<small>/nuit</small></div>
+                    <a href="https://www.booking.com/hotel/ma/reda-land-ben-slimane.fr.html?aid=2127708&label=metagha-link-MRMA-hotel-4092808_dev-desktop_los-1_bw-2_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-_mcid-50_bc-AD5ziA_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20260708_ppt-&sid=b48bc8919c4aaa6b411af7f449b8f0a6&all_sr_blocks=409280804_335449432_2_1_0&checkin=2026-07-08&checkout=2026-07-09&dest_id=4092808&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=409280804_335449432_2_1_0&hpos=1&map=1&matching_block_id=409280804_335449432_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A,A&sb_price_type=total&sr_order=popularity&sr_pri_blocks=409280804_335449432_2_1_0__3956&srepoch=1783352160&srpvid=55826daf73cd0613&type=total&ucfs=1"
+                    target="_blank" rel="noopener" class="btn-room">Voir sur Booking.com</a>
+                </div>
+            </div>
+            <!-- Suite Familiale -->
+            <div class="room-card">
+                <div class="room-card-image">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=600&q=80"
+                    alt="Suite Familiale Reda Land" loading="lazy">
+                    <span class="room-card-badge" style="background:#1B3A4B;">Familiale</span>
+                </div>
+                <div class="room-card-body">
+                    <h4>Suite Familiale</h4>
+                    <div class="room-features">
+                        <span><i class="fas fa-bed"></i> 2 lits</span>
+                        <span><i class="fas fa-wifi"></i> Wi-Fi</span>
+                        <span><i class="fas fa-coffee"></i> Petit-déj.</span>
+                        <span><i class="fas fa-swimming-pool"></i> Vue piscine</span>
+                    </div>
+                    <p style="font-size:0.9rem;color:var(--text-light);">Espace généreux pour les familles, avec tout le confort nécessaire.</p>
+                    <div class="room-price">À partir de 550 MAD<small>/nuit</small></div>
+                    <a href="https://www.booking.com/hotel/ma/reda-land-ben-slimane.fr.html?aid=2127708&label=metagha-link-MRMA-hotel-4092808_dev-desktop_los-1_bw-2_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-_mcid-50_bc-AD5ziA_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20260708_ppt-&sid=b48bc8919c4aaa6b411af7f449b8f0a6&all_sr_blocks=409280804_335449432_2_1_0&checkin=2026-07-08&checkout=2026-07-09&dest_id=4092808&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=409280804_335449432_2_1_0&hpos=1&map=1&matching_block_id=409280804_335449432_2_1_0&hpos=1&map=1&matching_block_id=409280804_335449432_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A,A&sb_price_type=total&sr_order=popularity&sr_pri_blocks=409280804_335449432_2_1_0__3956&srepoch=1783352160&srpvid=55826daf73cd0613&type=total&ucfs=1"
+                    target="_blank" rel="noopener" class="btn-room">Voir sur Booking.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ AMENITIES ═══════════════ -->
+    <section id="amenities">
+        <div class="section-header">
+            <span class="section-tag">Équipements</span>
+            <h2>Tout pour Votre Confort</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="amenities-grid">
+            <div class="amenity-card">
+                <span class="amenity-icon">🏊</span>
+                <h5>Piscine</h5>
+                <p>Extérieure, accès libre</p>
+            </div>
+            <div class="amenity-card">
+                <span class="amenity-icon">🛁</span>
+                <h5>Jacuzzi</h5>
+                <p>Dans les suites premium</p>
+            </div>
+            <div class="amenity-card">
+                <span class="amenity-icon">🥐</span>
+                <h5>Petit-déjeuner</h5>
+                <p>Inclus chaque matin</p>
+            </div>
+            <div class="amenity-card">
+                <span class="amenity-icon">📶</span>
+                <h5>Wi-Fi Gratuit</h5>
+                <p>Dans tout l'établissement</p>
+            </div>
+            <div class="amenity-card">
+                <span class="amenity-icon">🍽️</span>
+                <h5>Restaurant</h5>
+                <p>Tajines & cuisine locale</p>
+            </div>
+            <div class="amenity-card">
+                <span class="amenity-icon">🌅</span>
+                <h5>Balcon avec vue</h5>
+                <p>Vue dégagée sur la nature</p>
+            </div>
+            <div class="amenity-card">
+                <span class="amenity-icon">🕛</span>
+                <h5>Check-out 12:00</h5>
+                <p>Départ flexible</p>
+            </div>
+            <div class="amenity-card">
+                <span class="amenity-icon">🅿️</span>
+                <h5>Parking</h5>
+                <p>Gratuit sur place</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ GALLERY ═══════════════ -->
+    <section id="gallery">
+        <div class="section-header">
+            <span class="section-tag">Galerie</span>
+            <h2>Photos & Vidéos</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item wide">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80"
+                alt="Auberge Reda Land - Vue extérieure" loading="lazy" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&q=80"
+                alt="Piscine Reda Land" loading="lazy" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&q=80"
+                alt="Chambre Reda Land" loading="lazy" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&q=80"
+                alt="Suite Jacuzzi Reda Land" loading="lazy" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=500&q=80"
+                alt="Intérieur Reda Land" loading="lazy" onclick="openLightbox(this.src)">
+            </div>
+            <div class="gallery-item wide">
+                <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80"
+                alt="Terrasse et nature Reda Land" loading="lazy" onclick="openLightbox(this.src)">
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ REVIEWS ═══════════════ -->
+    <section id="reviews">
+        <div class="section-header">
+            <span class="section-tag">Témoignages</span>
+            <h2>Ce Que Nos Clients Disent</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="reviews-grid">
+            <!-- Avis 1 -->
+            <div class="review-card">
+                <div class="quote-icon">"</div>
+                <div class="review-stars">★★★★★</div>
+                <p>
+                    J'ai eu la chance de séjourner dans ce havre de paix intérieure, de sérénité et d'une douceur de vivre.
+                    Une auberge rare où le charme de la campagne rencontre l'excellence de l'accueil.
+                    Tout est pensé avec soin pour offrir une expérience unique dans un cadre naturel exceptionnel.
+                    Un véritable refuge pour les amoureux de la nature.
+                </p>
+                <div class="review-author">— Client vérifié</div>
+                <div class="review-detail">Avis Google Maps</div>
+                <div class="review-scores">
+                    <span>🛏 Chambres : 5/5</span>
+                    <span>👨‍🍳 Service : 5/5</span>
+                    <span>📍 Emplacement : 5/5</span>
+                </div>
+            </div>
+            <!-- Avis 2 -->
+            <div class="review-card">
+                <div class="quote-icon">"</div>
+                <div class="review-stars">★★★★★</div>
+                <p>
+                    J'ai séjourné chez Reda Land pendant 4 nuitées. C'est vrai que c'est un hôtel sur la Route Nationale
+                    de Benslimane, mais pour moi j'avais envie d'oublier le stress : j'ai tout trouvé chez eux.
+                    Belle suite avec jacuzzi, balcon avec vue dégagée, service top surtout avec Mr Anas, piscine,
+                    et surtout leurs tajines. Je recommande vivement !
+                </p>
+                <div class="review-author">— Client vérifié</div>
+                <div class="review-detail">Avis Google Maps · Séjour de 4 nuits</div>
+                <div class="review-scores">
+                    <span>🛏 Chambres : 5/5</span>
+                    <span>👨‍🍳 Service : 5/5</span>
+                    <span>📍 Emplacement : 3/5</span>
+                </div>
+            </div>
+            <!-- Avis 3 (synthétique basé sur la note globale) -->
+            <div class="review-card">
+                <div class="quote-icon">"</div>
+                <div class="review-stars">★★★★☆</div>
+                <p>
+                    Très bon séjour dans cet établissement au charme authentique. Le personnel est attentionné,
+                    les chambres sont propres et confortables. La piscine est un vrai plus. L'emplacement est
+                    pratique sur la route nationale. Bon rapport qualité-prix pour la région de Benslimane.
+                </p>
+                <div class="review-author">— Note globale</div>
+                <div class="review-detail">3.7/5 · 75+ avis Google</div>
+                <div class="review-scores">
+                    <span>⭐ Global : 3.7/5</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ BOOKING CTA ═══════════════ -->
+    <section id="booking">
+        <div class="section-header">
+            <span class="section-tag">Réservez</span>
+            <h2>Prêt à Vivre l'Expérience Reda Land ?</h2>
+            <div class="divider" style="background:var(--gold-light);"></div>
+            <p>Réservez directement sur Booking.com au meilleur prix garanti</p>
+        </div>
+        <div class="booking-card">
+            <div class="booking-info">
+                <div class="booking-info-item">
+                    <div class="val">3.7</div>
+                    <div class="lbl">★ Note</div>
+                </div>
+                <div class="booking-info-item">
+                    <div class="val">75+</div>
+                    <div class="lbl">Avis</div>
+                </div>
+                <div class="booking-info-item">
+                    <div class="val">3★</div>
+                    <div class="lbl">Hôtel</div>
+                </div>
+                <div class="booking-info-item">
+                    <div class="val">12:00</div>
+                    <div class="lbl">Check-out</div>
+                </div>
+            </div>
+            <a href="https://www.booking.com/hotel/ma/reda-land-ben-slimane.fr.html?aid=2127708&label=metagha-link-MRMA-hotel-4092808_dev-desktop_los-1_bw-2_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-_mcid-50_bc-AD5ziA_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20260708_ppt-&sid=b48bc8919c4aaa6b411af7f449b8f0a6&all_sr_blocks=409280804_335449432_2_1_0&checkin=2026-07-08&checkout=2026-07-09&dest_id=4092808&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=409280804_335449432_2_1_0&hpos=1&map=1&matching_block_id=409280804_335449432_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A,A&sb_price_type=total&sr_order=popularity&sr_pri_blocks=409280804_335449432_2_1_0__3956&srepoch=1783352160&srpvid=55826daf73cd0613&type=total&ucfs=1"
+            target="_blank" rel="noopener" class="btn-booking-cta">
+            <i class="fas fa-calendar-check"></i> Réserver sur Booking.com
+        </a>
+    </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section id="contact">
+    <div class="section-header">
+        <span class="section-tag">Contact</span>
+        <h2>Nous Trouver</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h3>Coordonnées</h3>
+            <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <div><strong>Adresse</strong>
+                    <span>R305, Benslimane, Maroc</span><br>
+                    <small style="color:var(--text-light);">Code Plus : MRJX+RG Benslimane</small>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-phone"></i>
+                <div><strong>Téléphone</strong>
+                    <a href="tel:+212629935579">06 29 93 55 79</a>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-clock"></i>
+                <div><strong>Heure de départ (check-out)</strong>
+                    <span>12:00</span>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-globe"></i>
+                <div><strong>Réservation en ligne</strong>
+                    <a href="https://www.booking.com/hotel/ma/reda-land-ben-slimane.fr.html?aid=2127708&label=metagha-link-MRMA-hotel-4092808_dev-desktop_los-1_bw-2_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-_mcid-50_bc-AD5ziA_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20260708_ppt-&sid=b48bc8919c4aaa6b411af7f449b8f0a6&all_sr_blocks=409280804_335449432_2_1_0&checkin=2026-07-08&checkout=2026-07-09&dest_id=4092808&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=409280804_335449432_2_1_0&hpos=1&map=1&matching_block_id=409280804_335449432_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A,A&sb_price_type=total&sr_order=popularity&sr_pri_blocks=409280804_335449432_2_1_0__3956&srepoch=1783352160&srpvid=55826daf73cd0613&type=total&ucfs=1"
+                    target="_blank" rel="noopener">Booking.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="map-embed">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.5!2d-7.1214!3d33.6142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM2JzUxLjEiTiA3wrAwNycxNy4wIlc!5e0!3m2!1sfr!2sma!4v1700000000000"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Carte de localisation Auberge Reda Land">
+        </iframe>
+    </div>
+</div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+    <div class="footer-logo">🌿 Reda Land</div>
+    <p>Auberge 3 étoiles · R305, Benslimane, Maroc</p>
+    <div class="footer-social">
+        <a href="https://www.booking.com/hotel/ma/reda-land-ben-slimane.fr.html" target="_blank" rel="noopener" aria-label="Booking.com"><i class="fas fa-calendar-check"></i></a>
+        <a href="tel:+212629935579" aria-label="Téléphone"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/212629935579" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:contact@redaland.ma" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p style="margin-top:10px;font-size:0.8rem;">
+        &copy; <span id="year"></span> Auberge Reda Land. Tous droits réservés. |
+        <a href="https://www.booking.com/hotel/ma/reda-land-ben-slimane.fr.html" target="_blank" rel="noopener">Réserver sur Booking.com</a>
+    </p>
+</footer>
+
+<!-- ═══════════════ WHATSAPP FLOAT ═══════════════ -->
+<a href="https://wa.me/212629935579?text=Bonjour%20Reda%20Land%2C%20je%20souhaite%20des%20informations%20sur%20vos%20chambres."
+target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ═══════════════ LIGHTBOX ═══════════════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">&times;</button>
+    <img src="" alt="Vue agrandie" id="lightboxImg">
+</div>
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<script>
+    // ── Navbar scroll effect ──
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 60) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // ── Mobile nav toggle ──
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    function toggleNav() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    }
+
+    function closeNav() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
+
+    // Close nav when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
+            closeNav();
+        }
+    });
+
+    // ── Lightbox ──
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    function openLightbox(src) {
+        lightbox.classList.add('active');
+        lightboxImg.src = src;
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
+    });
+
+    // ── Footer year ──
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Smooth reveal on scroll ──
+    const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+        observer.observe(section);
+    });
+
+    // Trigger initial visibility for hero
+    document.querySelector('.hero').style.opacity = '1';
+    document.querySelector('.hero').style.transform = 'translateY(0)';
+
+    // Show all sections immediately if they're in view on load
+    setTimeout(() => {
+        document.querySelectorAll('section').forEach(s => {
+            const rect = s.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                s.style.opacity = '1';
+                s.style.transform = 'translateY(0)';
+            }
+        });
+    }, 200);
+</script>
+</body>
+</html>
